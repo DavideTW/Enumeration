@@ -1,10 +1,10 @@
-package it.unitn.davidetw.enumeration;
+package it.unitn.davidetw.enumeration.model;
 
 import java.util.Set;
 
 public abstract class Enumeration <T> {
 
-    void enumeration(Set<T> problemsData, T[] S, int i, boolean remove) {
+    public void enumeration(Set<T> problemsData, T[] S, int i, boolean remove) {
         if (accept(problemsData, S, i)) {
             processSolution(problemsData, S, i);
         } else {
@@ -22,10 +22,10 @@ public abstract class Enumeration <T> {
         }
     }
 
-    abstract boolean accept(Set<T> problemsData, T[] S, int i);
+    protected abstract boolean accept(Set<T> problemsData, T[] S, int i);
 
-    abstract void processSolution(Set<T> problemsData, T[] S, int i);
+    protected abstract void processSolution(Set<T> problemsData, T[] S, int i);
 
-    abstract Set<T> coiches(Set<T> problemsData, T[] S, int i);
+    protected abstract Set<T> coiches(Set<T> problemsData, T[] S, int i);
 
 }

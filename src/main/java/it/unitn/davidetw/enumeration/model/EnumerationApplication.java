@@ -1,4 +1,6 @@
-package it.unitn.davidetw.enumeration;
+package it.unitn.davidetw.enumeration.model;
+
+import it.unitn.davidetw.enumeration.SubsetsEnumeration;
 
 import java.util.HashSet;
 import java.util.Scanner;

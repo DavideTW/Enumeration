@@ -1,16 +1,18 @@
 package it.unitn.davidetw.enumeration;
 
+import it.unitn.davidetw.enumeration.model.Enumeration;
+
 import java.util.Set;
 
 public class SubsetsEnumeration extends Enumeration<Integer> {
 
     @Override
-    boolean accept(Set<Integer> problemsData, Integer[] S, int i) {
+    protected boolean accept(Set<Integer> problemsData, Integer[] S, int i) {
         return i >= problemsData.size(); // starts from 0, so i >= size
     }
 
     @Override
-    void processSolution(Set<Integer> problemsData, Integer[] S, int n) {
+    protected void processSolution(Set<Integer> problemsData, Integer[] S, int n) {
         System.out.print("{ ");
         for (int i = 0; i < n; i++) {
             if (S[i] != 0) {
@@ -21,7 +23,7 @@ public class SubsetsEnumeration extends Enumeration<Integer> {
     }
 
     @Override
-    Set<Integer> coiches(Set<Integer> problemsData, Integer[] S, int i) {
+    protected Set<Integer> coiches(Set<Integer> problemsData, Integer[] S, int i) {
         return Set.of(0, 1);
     }
 
