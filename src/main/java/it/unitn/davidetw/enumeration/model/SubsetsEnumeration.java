@@ -1,6 +1,4 @@
-package it.unitn.davidetw.enumeration;
-
-import it.unitn.davidetw.enumeration.model.Enumeration;
+package it.unitn.davidetw.enumeration.model;
 
 import java.util.Set;
 
